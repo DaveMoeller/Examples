@@ -1,7 +1,9 @@
 # To Do Tasks:
-
+## GitHub Desktop
 - View Changes
 - Commit to branch (with comments)
-- Pull Request
-- Checkin
-- Merge
+- Push to remote branch
+- Create Pull Request
+- Merge pull request
+- Confirm Merge
+- Optionally Delete Branch
