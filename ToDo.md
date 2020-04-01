@@ -1,4 +1,4 @@
-# To Do Tasks:
+# To Do Tasks
 ## GitHub Desktop
 ### Clone
 ### Change
