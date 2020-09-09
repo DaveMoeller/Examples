@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Month Functions</title>
+</head>
+<body>
+<h1>Date Functions</h1>
+<h2>Today</h2>
+<p id="today"></p>
+<h2>First of Month</h2>
+<p id="firstOfMonth"></p>
+<h2>First of Week</h2>
+<p id="firstOfWeek"></p>
+<h2>Last of Week</h2>
+<p id="lastOfWeek"></p>
+<h2>Last of Month</h2>
+<p id="lastOfMonth"></p>
+<script>
+
+	var dt = new Date(); 
+	document.getElementById("today").innerHTML = dt;
+
+	var fom = new Date(dt.getFullYear(), dt.getMonth(), 1);
+	fom.setHours(0);
+	fom.setMinutes(0);
+	fom.setSeconds(0);
+	document.getElementById("firstOfMonth").innerHTML = fom;
+
+	var dtsow = dt; 
+	dtsow.setDate(dt.getDate()-dt.getDay());
+	dtsow.setHours(0);
+	dtsow.setMinutes(0);
+	dtsow.setSeconds(0);
+	document.getElementById("firstOfWeek").innerHTML = dtsow;
+
+	var dteow = dt;
+	dteow.setHours(23);
+	dteow.setMinutes(59);
+	dteow.setSeconds(59);
+
+	dteow.setDate(dt.getDate()+(6-dt.getDay()));
+	document.getElementById("lastOfWeek").innerHTML = dteow;
+
+	var dteom ;
+	dteom = new Date();
+	dteom.setHours(23);
+	dteom.setMinutes(59);
+	dteom.setSeconds(59);
+	var newMonth = dt.getMonth()+1;
+	newMonth = newMonth % 11;
+	dteom.setFullYear(dt.getFullYear(), newMonth, 0);
+
+	document.getElementById("lastOfMonth").innerHTML = dteom;
+
+</script>
+
+</body>
+</html>
